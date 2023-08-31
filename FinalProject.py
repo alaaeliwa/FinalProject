@@ -85,6 +85,21 @@ while True:
                               "4.Get Student Average\n"
                               "5.Add Course to student with mark.\n"
                               "6.Exit\n"))
+        if selection == 1:
+
+            # TODO 10 make sure that Student number is not exists before
+            student_number = input("Enter Student Number : ")
+            for student in students_list:
+                if student.student_number == student_number :
+                    print("Student with the same number already exists.")
+            else:
+                student_name = input("Enter Student Name : ")
+                while True:
+                    try:
+                        student_age = int(input("Enter Student Age : "))
+                        break
+                    except:
+                        print("Invalid Value")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
