@@ -39,7 +39,7 @@ class Student:
 
 # TODO 5 define a method to enroll new course to student courses list
 
-    def enroll_course(self, course ):
+    def enroll_course(self, course):
         self.courses_list.append(course)
 
 # method to get_student_details as dict
@@ -105,6 +105,17 @@ while True:
             new_student = Student(student_name, student_age, student_number)
             students_list.append(new_student)
             print("Student Added Successfully")
+
+        elif selection == 2:
+            student_number = input("Enter Student Number : ")
+            # TODO 12 find the target student using loops and delete it if exist , if not print ("Student Not Exist")
+            for student in students_list:
+                if student.student_number == student_number:
+                    students_list.remove(student)
+                    print("Student Deleted Successfully")
+                    break
+            else:
+                print("Student Not Exist")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
