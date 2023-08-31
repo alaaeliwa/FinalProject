@@ -54,3 +54,17 @@ class Student:
                 print(f"Course: {course.course_name}, Mark: {course.course_mark}")
         else:
             print("No courses enrolled.")
+
+
+    # method to get student_average as a value
+    def get_student_average(self):
+        # TODO 7 return the student average
+        sum=0
+        if self.courses_list:
+            for course in self.courses_list:
+                sum += course.course_mark
+            return sum / len(self.courses_list)
+        else:
+            print("No courses enrolled.")
+            return 0
+
