@@ -116,6 +116,18 @@ while True:
                     break
             else:
                 print("Student Not Exist")
+        elif selection == 3:
+            student_number = input("Enter Student Number : ")
+            # TODO 13 find the target student using loops and print student detials  if exist , if not print ("Student Not Exist")
+            for student in students_list:
+                if student.student_number == student_number:
+                    student_details = student.get_student_details()
+                    print("Student Details:")
+                    for key, value in student_details.items():
+                        print(f"{key}: {value}")
+                break
+            else:
+                print("Student Not Exist")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
