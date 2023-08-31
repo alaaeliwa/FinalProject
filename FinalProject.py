@@ -74,4 +74,17 @@ class Student:
 
 students_list = []
 
+while True:
+
+    # TODO 9 handle Exception for selection input
+
+    try:
+        selection = int(input("1.Add New Student\n"
+                              "2.Delete Student\n"
+                              "3.Display Student\n"
+                              "4.Get Student Average\n"
+                              "5.Add Course to student with mark.\n"
+                              "6.Exit\n"))
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
 
