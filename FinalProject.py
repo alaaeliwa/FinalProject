@@ -100,6 +100,11 @@ while True:
                         break
                     except:
                         print("Invalid Value")
+
+            # TODO 11 create student object and append it to students list
+            new_student = Student(student_name, student_age, student_number)
+            students_list.append(new_student)
+            print("Student Added Successfully")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
