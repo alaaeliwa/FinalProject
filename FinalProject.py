@@ -68,3 +68,10 @@ class Student:
             print("No courses enrolled.")
             return 0
 
+# in Global Scope
+# TODO 8 declare empty students list
+
+
+students_list = []
+
+
