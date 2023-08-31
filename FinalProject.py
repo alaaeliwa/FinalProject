@@ -123,17 +123,35 @@ while True:
                 if student.student_number == student_number:
                     student_details = student.get_student_details()
                     print("Student Details:")
+                    a=0
                     for key, value in student_details.items():
                         print(f"{key}: {value}")
+                        a+=1
+                        if a==3:
+                            break
+                    print('student course: ')
+                    student.get_student_courses()
+
                 break
             else:
                 print("Student Not Exist")
         elif selection == 4:
-            student_number = input("Enter Student Number")
+            student_number = input("Enter Student Number : ")
             # TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
             for student in students_list:
                 if student.student_number == student_number:
                     print(f'avareg : {student.get_student_average()}\n')
+            else:
+                print("Student Not Exist")
+        elif selection == 5:
+            student_number = input("Enter Student Number : ")
+            # TODO 15 ask user to enter course name and course mark then create coures object then append it to target student courses
+            for student in students_list:
+                if student.student_number == student_number:
+                    course_name = input("Enter course name: ")
+                    course_mark = float(input("Enter course mark: "))
+                    new_course = Course(course_name, course_mark)
+                    student.courses_list.append(new_course)
             else:
                 print("Student Not Exist")
     except ValueError:
