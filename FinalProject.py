@@ -154,6 +154,10 @@ while True:
                     student.courses_list.append(new_course)
             else:
                 print("Student Not Exist")
+        else:
+            # TODO 16 call a function to exit the program
+            print("Exiting...")
+            exit()
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
